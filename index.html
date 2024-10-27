@@ -107,7 +107,6 @@ h5{
     <header style="background-color: white;">
         <h1>ยินดีต้อนรับสู่ Ploy shop >< </h1>
         <!-- รวม navbar.html -->
-        <?php include 'navbar.html'; ?>
     </header>
     
  <main>
@@ -226,6 +225,14 @@ h5{
             </div>
         </section>
     </main>
+
+        <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            });
+    </script>
 
     <footer class="text-center mt-4">
         <p>© 2024 Ploy shop สงวนลิขสิทธิ์.</p>
