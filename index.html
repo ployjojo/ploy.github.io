@@ -225,8 +225,15 @@ h5{
         </section>
     </main>
     
+        <div id="footer-placeholder"></div> <!-- เพิ่มตำแหน่งสำหรับ navbar -->
+    
     <script>
         fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            });
+              fetch('footer.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('navbar-placeholder').innerHTML = data;
