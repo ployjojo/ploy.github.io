@@ -7,7 +7,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="icon" href="https://media.istockphoto.com/id/1297111820/th/%E0%B9%80%E0%B8%A7%E0%B8%84%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%95%E0%B8%B9%E0%B8%99%E0%B9%81%E0%B8%A1%E0%B8%A7%E0%B8%AA%E0%B8%B2%E0%B8%A1%E0%B8%AA%E0%B8%B5%E0%B8%99%E0%B9%88%E0%B8%B2%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%81%E0%B8%AD%E0%B8%9A%E0%B9%80%E0%B8%A7%E0%B8%81%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C.jpg?s=612x612&w=0&k=20&c=_p8-SRHJA4Z98EHoYFTMabbpjd4uucF17paMz-3RWCQ=" sizes="32x32" />
     <link rel="icon" href="https://media.istockphoto.com/id/1297111820/th/%E0%B9%80%E0%B8%A7%E0%B8%84%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%95%E0%B8%B9%E0%B8%99%E0%B9%81%E0%B8%A1%E0%B8%A7%E0%B8%AA%E0%B8%B2%E0%B8%A1%E0%B8%AA%E0%B8%B5%E0%B8%99%E0%B9%88%E0%B8%B2%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%81%E0%B8%AD%E0%B8%9A%E0%B9%80%E0%B8%A7%E0%B8%81%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C.jpg?s=612x612&w=0&k=20&c=_p8-SRHJA4Z98EHoYFTMabbpjd4uucF17paMz-3RWCQ=" sizes="192x192" />
-    <title data-lang data-lang-th="มูฮ่าฮ่า shop" data-lang-en="Muhaha Shop">มูฮ่าฮ่า shop</title>
+    <title>Ploy shop</title>
     <style>
         .navbar {
     background-color: white;
@@ -94,36 +94,12 @@ h5{
 
 
     </style>
-    <script>
-        function openSearch() {
-            document.getElementById("myOverlay").style.display = "block";
-        }
-
-        function closeSearch() {
-            document.getElementById("myOverlay").style.display = "none";
-        }
-
-        function changeLanguage(lang) {
-            localStorage.setItem('lang', lang);
-            const elements = document.querySelectorAll("[data-lang]");
-            elements.forEach(element => {
-                element.innerHTML = element.getAttribute("data-lang-" + lang);
-            });
-        }
-
-        function loadLanguage() {
-            const lang = localStorage.getItem('lang') || 'en';
-            changeLanguage(lang);
-        }
-
-        window.onload = loadLanguage;
-    </script>
 </head>
 <body>
     <header style="background-color: white;">
-        <h1 data-lang data-lang-th="ยินดีต้อนรับ" data-lang-en="Welcome Bro">djfnaej</h1>
+        <h1>ยินดีต้อนรับสู่ Ploy shop</h1>
         <ul class="navbar">
-                <a class="navbar-brand" href="#" data-lang data-lang-th="มูฮ่าฮ่า shop" data-lang-en="Muhaha Shop">มูฮ่าฮ่า shop</a>
+                <a class="navbar-brand" href="index.html">มูฮ่าฮ่า shop</a>
                 <div class="ml-auto">
                     <div class="btn-group" style="padding-right: 240px;">
                         <li class="nav-item">
@@ -148,8 +124,6 @@ h5{
                         <a href="cart.php">
                             <img src="./picture/cart.png" height="18px">
                         </a>
-                        <button class="btn"  onclick="changeLanguage('th')">TH</button>
-                        <button class="btn" onclick="changeLanguage('en')">EN</button>
                     </div>
             </div>
         </ul>
@@ -235,8 +209,8 @@ h5{
     </main>
 
     <footer class="text-center mt-4">
-        <p data-lang data-lang-th="© 2024 มูฮ่าฮ่า shop. สงวนลิขสิทธิ์." data-lang-en="© 2024 Muhaha shop. All rights reserved.">© 2024 มูฮ่าฮ่า shop. สงวนลิขสิทธิ์.</p>
-        <p><a href="contact.php" data-lang data-lang-th="ติดต่อเรา." data-lang-en="contact us.">ติดต่อเรา</a></p>
+        <p>© 2024 Ploy shop สงวนลิขสิทธิ์.</p>
+        <p><a href="contact.php">ติดต่อเรา</a></p>
     </footer>
 </body>
 </html>
