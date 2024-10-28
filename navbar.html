@@ -1,4 +1,4 @@
-<ul class="navbar">
+<ul class="navbar navbar-expand-lg bg-white">
     <a class="navbar-brand" href="index.html" style="padding-left: 20px;">Ploy shop</a>
     <div class="ml-auto d-flex align-items-center">
         <div class="btn-group">
@@ -8,27 +8,32 @@
             <li class="nav-item">
                 <a class="nav-link" href="product.html">สินค้า</a>
             </li>
-                <!-- Dropdown -->
-                  <div class="w3-dropdown-hover">
-                    <button class="w3-button w3-black">Hover Over Me!</button>
-                    <div class="w3-dropdown-content w3-bar-block w3-border">
-                      <a href="#" class="w3-bar-item w3-button">Link 1</a>
-                      <a href="#" class="w3-bar-item w3-button">Link 2</a>
-                      <a href="#" class="w3-bar-item w3-button">Link 3</a>
-                    </div>
-                  </div>
+            <!-- Dropdown using Bootstrap -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    หมวดหมู่
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Link 1</a></li>
+                    <li><a class="dropdown-item" href="#">Link 2</a></li>
+                    <li><a class="dropdown-item" href="#">Link 3</a></li>
+                </ul>
+            </li>
         </div>
         <form class="d-flex" style="height: 40px; padding-right: 20px;">
             <input class="form-control me-2" type="text" placeholder="Search">
             <button class="btn btn-white" type="button">
-                <img src="./picture/search.png" height="18px">
+                <img src="./picture/search.png" height="18px" alt="Search">
             </button>
         </form>
         <a href="user.php" class="d-inline-block" style="margin-right: 15px;">
-            <img src="./picture/user.png" height="24px">
+            <img src="./picture/user.png" height="24px" alt="User">
         </a>
         <a href="cart.php" class="d-inline-block">
-            <img src="./picture/cart.png" height="24px">
+            <img src="./picture/cart.png" height="24px" alt="Cart">
         </a>
     </div>
 </ul>
+
+<!-- Bootstrap JavaScript Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
