@@ -4,15 +4,14 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
-            <ul class="navbar-nav me-auto justify-content-center w-100"> 
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav d-flex align-items-center"> 
                 <li class="nav-item">
                     <a class="nav-link" href="index.html">หน้าแรก</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="product.html">สินค้า</a>
                 </li>
-                <!-- Dropdown using Bootstrap -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         ติดต่อเรา
@@ -22,9 +21,8 @@
                         <li><a class="dropdown-item" href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1200px-Instagram_icon.png" style="height:40px; width:40px; margin-right: 10px;"> Instagram</a></li>
                     </ul>
                 </li>
-            </ul>
-
-            <ul class="navbar-nav ms-auto"> <!-- Align search bar and icons to the right -->
+                
+                <!-- Search bar -->
                 <li class="nav-item">
                     <form class="d-flex" style="height: 40px;">
                         <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" style="border-radius: 20px;">
@@ -33,6 +31,8 @@
                         </button>
                     </form>
                 </li>
+
+                <!-- User and Cart icons -->
                 <li class="nav-item">
                     <a href="#" class="nav-link">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsDe9v2PQ1KP0urNNLsumh3SsmbrpE7sU30w&s" height="24px" alt="User" style="margin-right: 10px;">
