@@ -42,9 +42,26 @@ h5 {
     color: #fff;
 }
 
-.btn-back {
-    background-color: #6c757d;
-    color: #fff;
+.back-button {
+    background-color: #007bff; /* สีพื้นหลัง */
+    color: white; /* สีตัวอักษร */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px; /* ขอบโค้งมน */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.back-button:hover {
+    background-color: #0056b3; /* สีพื้นหลังเมื่อชี้เมาส์ */
+    transform: scale(1.05); /* ขยายเล็กน้อยเมื่อชี้เมาส์ */
+}
+
+.back-button:active {
+    background-color: #003f7f; /* สีพื้นหลังเมื่อคลิก */
+}
+
 }
 
 .btn:hover {
