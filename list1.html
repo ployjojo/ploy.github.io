@@ -38,7 +38,7 @@
                 <p>ราคา : 329 บาท</p>
                 <a href="#" class="btn btn-primary" onclick="showOrderToast()">สั่งซื้อ</a>
             </div>
-            <button onclick="goBack()">ย้อนกลับ</button>
+            <button onclick="goBack()" class="back-button">ย้อนกลับ</button>
         </div>
     
          <!-- Toast Notification -->
@@ -59,6 +59,9 @@
    <div id="footer-placeholder"></div> <!-- Footer placeholder --> 
     <!-- Navbar & Footer Scripts -->
     <script>
+            function goBack() {
+                history.back();
+            }
         fetch('navbar.html')
             .then(response => response.text())
             .then(data => {
