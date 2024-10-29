@@ -6,16 +6,75 @@
     <title>ตุ๊กตาแมวน่ารัก</title>
     <link rel="stylesheet" href="styles.css"> <!-- เชื่อมโยง CSS ที่คุณใช้ -->
 </head>
+      <style>
+
+        .navbar { background-color: white; font-family: 'Prompt', sans-serif; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+        .navbar a { color: black; text-decoration: none; font-size: 14px; padding: 20px; }
+        .navbar a:hover { color: blue; }
+
+        body { font-family: 'Prompt', sans-serif; background-color: #f4f4f4; }
+        h1 { text-align: center; padding: 20px; }
+
+        .product-items { cursor: pointer; transition: 0.3s; }
+        .product-items:hover { transform: scale(1.03); }
+
+    </style>
 <body>
-    <div class="product-details">
-        <div class="product">
-            <img class="img" src="https://down-th.img.susercontent.com/file/79d3aee97234753ed60fdbd0bf08170e@resize_w450_nl.webp" alt="ตุ๊กตาแมวน่ารัก ของเล่นตุ๊กตา" style="height: 280px;">
-            <h5>ตุ๊กตาแมวน่ารัก ของเล่นตุ๊กตา</h5>
-            <p>ประเภทของเล่น: ตุ๊กตา<br>ไส้: ผ้าฝ้าย PP</p>
-            <p>ราคา : 329 บาท</p>
-            <a href="#" class="btn btn-primary" onclick="showOrderToast()">สั่งซื้อ</a>
+
+    <header style="background-color: white;">
+        <h1> หน้าสินค้า >< </h1>
+        <div id="navbar-placeholder"></div>
+    </header>
+
+<main>
+    <section id="products">
+        <div class="product-details">
+            <div class="product">
+                <img class="img" src="https://down-th.img.susercontent.com/file/79d3aee97234753ed60fdbd0bf08170e@resize_w450_nl.webp" alt="ตุ๊กตาแมวน่ารัก ของเล่นตุ๊กตา" style="height: 280px;">
+                <h5>ตุ๊กตาแมวน่ารัก ของเล่นตุ๊กตา</h5>
+                <p>ประเภทของเล่น: ตุ๊กตา<br>ไส้: ผ้าฝ้าย PP</p>
+                <p>ราคา : 329 บาท</p>
+                <a href="#" class="btn btn-primary" onclick="showOrderToast()">สั่งซื้อ</a>
+            </div>
+            <a href="index.html" class="btn btn-back">ย้อนกลับ</a>
         </div>
-        <a href="index.php" class="btn btn-back">ย้อนกลับ</a>
-    </div>
+    
+         <!-- Toast Notification -->
+        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+            <div id="orderToast" class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="d-flex">
+                    <div class="toast-body">
+                        สั่งซื้อสำเร็จจ้า!
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+   <div id="footer-placeholder"></div> <!-- Footer placeholder --> 
+    <!-- Navbar & Footer Scripts -->
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            });
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+
+        // Toast Function for Order Confirmation
+        function showOrderToast() {
+            var toastElement = document.getElementById('orderToast');
+            var toast = new bootstrap.Toast(toastElement);
+            toast.show();
+        }
+    </script>
+    
 </body>
 </html>
